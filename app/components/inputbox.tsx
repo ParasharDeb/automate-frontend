@@ -21,7 +21,7 @@ export default function CustomInputbox({
         value={value}
         className="
           bg-grey-300 
-          px-2 py-1 
+          px-3 py-2 
           w-full 
           rounded-lg
           mt-2 

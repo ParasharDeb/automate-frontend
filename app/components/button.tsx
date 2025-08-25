@@ -3,11 +3,13 @@ export default function Custombutton({
   size,
   onClick,
   content,
+  classname
 }: {
   varient: "darkmode" | "lightmode";
   size: "sm" | "lg";
   onClick: (e: any) => void;
   content: string;
+  classname?:string
 }) {
   const baseStyles =
     "inline-flex items-center justify-center rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none mt-5 cursor-pointer";
@@ -27,7 +29,7 @@ export default function Custombutton({
   return (
     <button
       onClick={onClick}
-      className={`${baseStyles} ${variantStyles[varient]} ${sizeStyles[size]}`}
+      className={`${baseStyles} ${variantStyles[varient]} ${sizeStyles[size]} ${classname}`}
       type="button"
     >
       {content}
