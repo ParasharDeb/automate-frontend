@@ -1,14 +1,14 @@
 'use client'
 import { useState } from 'react';
 import LetterGlitch from './components/background';
-
+import { useRouter } from 'next/navigation';
 export default function Home() {
   const [glitchColors, setGlitchColors] = useState<string[]>(['#2b4539', '#61dca3', '#61b3dc']);
   const [glitchSpeed, setGlitchSpeed] = useState<number>(50);
   const [centerVignette, setCenterVignette] = useState<boolean>(true);
   const [outerVignette, setOuterVignette] = useState<boolean>(false);
   const [smooth, setSmooth] = useState<boolean>(true);
-
+  const Router=useRouter();
   // Helper to update a specific color in the glitchColors array
   const updateColor = (index: number, value: string) => {
     const next = glitchColors.slice();
@@ -43,7 +43,7 @@ export default function Home() {
           fontWeight: "bold",
           textShadow: "0 1px 3px rgba(0,0,0,0.7)"
         }}>
-          Ready to make your 
+          Ready to take your Linkedin to the next LEVEL
         </h1>
         <button style={{
           margin: 16,
@@ -54,7 +54,8 @@ export default function Home() {
           border: "none",
           fontSize: "1.25rem",
           cursor: "pointer"
-        }}>
+        }}
+        onClick={()=>{Router.push("/dashboard")}}>
           Get Started
         </button>
         <button style={{
@@ -66,7 +67,8 @@ export default function Home() {
           border: "none",
           fontSize: "1.25rem",
           cursor: "pointer"
-        }}>
+        }}
+        onClick={()=>{Router.push("https://github.com/ParasharDeb/automate-frontend")}}>
           Learn More
         </button>
       </div>
