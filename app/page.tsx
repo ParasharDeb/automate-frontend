@@ -55,7 +55,7 @@ export default function Home() {
           fontSize: "1.25rem",
           cursor: "pointer"
         }}
-        onClick={()=>{Router.push("/dashboard")}}>
+        onClick={()=>{Router.push("/signin")}}>
           Get Started
         </button>
         <button style={{

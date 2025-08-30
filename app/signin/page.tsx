@@ -15,7 +15,7 @@ export default function Signin(){
                 <CustomInputbox placeholder="John Doe" type="text" value={username} onChange={(e)=>{setusername(e.target.value)}} name="Username"/>
                 <CustomInputbox placeholder="abc111" type="password" value={password} onChange={(e)=>{setpassword(e.target.value)}} name="Password"/>
                 <Custombutton classname="w-full" varient="lightmode" size="lg" onClick={(e)=>console.log(email,username,password)}content="Signup"/>
-                <h6 className="text-grey-100 pt-5">Don't have an account?</h6>
+                <h6 className="text-grey-100 pt-5">Don't have an account? <Link href={"/signup"}>Sign In</Link></h6>
             </div>
         </div>
     )
